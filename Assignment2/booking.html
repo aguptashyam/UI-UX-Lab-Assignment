@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - TripTastic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TripTastic</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Book Your Dream Vacation</h2>
+        <p>Fill out the form below to start your booking process. We will contact you shortly to confirm.</p>
+        
+        <form class="booking-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="start-date">Preferred Start Date:</label>
+            <input type="date" id="start-date" name="start-date" required>
+
+            <label for="destination">Destination (if not in package):</label>
+            <input type="text" id="destination" name="destination">
+            
+            <label for="package">Select a Package:</label>
+            <select id="package" name="package">
+                <option value="none">-- Select a Package --</option>
+                <option value="himalayan">Himalayan Wonders</option>
+                <option value="kerala">Kerala Backwaters</option>
+                <option value="triangle">Golden Triangle</option>
+                <option value="goa">Goan Beach Paradise</option>
+            </select>
+
+            <button type="submit">Submit Booking Request</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TripTastic. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
