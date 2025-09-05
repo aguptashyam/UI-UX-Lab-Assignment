@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Innovate Fest 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>Innovate Fest 2025</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact & FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Participant Registration</h2>
+        <p>Fill out the form below to register for an event. We're excited to have you!</p>
+        
+        <form class="registration-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="college">College Name:</label>
+            <input type="text" id="college" name="college" required>
+            
+            <label for="event">Select Event:</label>
+            <select id="event" name="event">
+                <option value="">-- Choose an Event --</option>
+                <option value="codeclash">CodeClash Hackathon</option>
+                <option value="robowars">RoboWars</option>
+                <option value="pitch">Business Plan Pitch</option>
+                <option value="design">Design Duel</option>
+            </select>
+
+            <button type="submit">Register Now</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Thapar Institute Of Engineering and Technology. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+/* --- Root Variables and General Body Styles --- */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #007bff;
+    --accent-color: #ffc107;
+    --text-color: #333;
+    --bg-color: #f0f2f5;
+    --light-gray: #dee2e6;
+    --white: #ffffff;
+}
+
+/* Element Selector */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- Header and Navigation Styling --- */
+/* ID Selector */
+#main-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#main-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    /* Flexbox for navigation alignment */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Pseudo-class Selector (:hover) */
+nav ul li a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* --- Main Content and Container --- */
+/* Class Selector */
+.container {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pseudo-element Selector (::first-letter) */
+.container section > p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* --- Form Styling --- */
+.registration-form {
+    border: 1px solid var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+/* Attribute Selectors */
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    box-sizing: border-box; /* Box Model property */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Pseudo-class selector (:focus) */
+.registration-form input:focus,
+.registration-form select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Attribute selector for button */
+.registration-form button[type="submit"] {
+    margin-top: 20px;
+    padding: 12px 25px; /* Box Model property */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.registration-form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* --- Table Styling --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid var(--light-gray); /* Box Model property */
+    padding: 12px 15px; /* Box Model property */
+    text-align: left;
+}
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+/* Pseudo-class Selector (:nth-child) */
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* --- Gallery with CSS Grid --- */
+.gallery-grid {
+    display: grid;
+    /* Responsive grid columns */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid var(--light-gray); /* Box Model property */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* --- Multimedia Sections (Video & Audio) --- */
+.video-container {
+    margin-top: 2rem;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.audio-guide {
+    margin: 1.5rem 0; /* Box Model property */
+    padding: 1rem; /* Box Model property */
+    background-color: #e9ecef;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 5px;
+    /* Flexbox for alignment */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.audio-guide p {
+    margin: 0;
+    font-weight: bold;
+}
+.audio-guide audio {
+    width: 100%;
+}
+
+/* Contact & FAQ Page */
+.faq-item {
+    margin-bottom: 20px;
+}
+.faq-item h4 {
+    color: #0056b3;
+    margin-bottom: 5px;
+}
+.social-links a {
+    text-decoration: none;
+    color: #0056b3;
+    margin-right: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer Styling --- */
+footer {
+    text-align: center;
+    padding: 20px; /* Box Model property */
+    margin-top: 20px;
+    background-color: #343a40;
+    color: var(--white);
+}
+/* Pseudo-element Selector (::before) */
+footer::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 0 auto 15px;
+}
+
+
+/* --- Responsive Design with Media Queries --- */
+@media (max-width: 768px) {
+    #main-header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        /* Flexbox direction change for mobile */
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        border-radius: 0;
+        border-bottom: 1px solid var(--secondary-color);
+    }
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .audio-guide {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
