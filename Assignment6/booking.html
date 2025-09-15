@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - TripTastic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TripTastic</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Book Your Dream Vacation</h2>
+        <form class="booking-form" id="booking-form">
+            <label for="package">Select a Package: *</label>
+            <select id="package" name="package" required>
+                <option value="">-- Select a Package --</option>
+                <option value="himalayan">Himalayan Wonders</option>
+                <option value="kerala">Kerala Backwaters</option>
+                <option value="triangle">Golden Triangle</option>
+                <option value="goa">Goan Beach Paradise</option>
+            </select>
+
+            <label for="start-date">Check-in Date: *</label>
+            <input type="date" id="start-date" name="start-date" required>
+
+            <label for="end-date">Check-out Date: *</label>
+            <input type="date" id="end-date" name="end-date" required>
+
+            <label for="guests">Number of Guests: *</label>
+            <input type="number" id="guests" name="guests" min="1" value="1" required>
+
+            <label for="promo-code">Promo Code:</label>
+            <input type="text" id="promo-code" name="promo-code" placeholder="e.g., EARLYBIRD">
+            
+            <div id="price-estimate">Fill out the form to see an estimate.</div>
+            
+            <button type="submit">Submit Booking Request</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 TripTastic. All Rights Reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
