@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Math Operations</title>
+</head>
+<body>
+    <h2>Enter Two Numbers</h2>
+  Number 1: <input type="number" id="num1"><br>
+  Number 2: <input type="number" id="num2"><br><br>
+  <button onclick="calculate()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculate() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+
+      const sum = num1 + num2;
+      const difference = num1 - num2;
+      const product = num1 * num2;
+      const quotient = num2 !== 0 ? (num1 / num2) : 'Infinity (division by zero)';
+
+      document.getElementById('result').innerHTML = `
+        Sum: ${sum}<br>
+        Difference: ${difference}<br>
+        Product: ${product}<br>
+        Quotient: ${quotient}
+      `;
+    }
+  </script>
+</body>
+</html>
